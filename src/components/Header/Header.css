@@ -1,5 +1,5 @@
 header {
-  width: 75%;
+  width: 77%;
   min-height: 7em;
   display: flex;
   justify-content: space-between;
@@ -77,9 +77,15 @@ header {
   cursor: pointer;
 }
 
+@media (max-width: 85em) {
+  header {
+    width: 87%;
+  }
+}
+
 @media (max-width: 64em) {
   header {
-    width: 85%;
+    width: 90%;
   }
 
   .menu {
@@ -104,13 +110,13 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    transform: translateY(-150%);
+    transform: translateX(-150%);
     background-color: hsla(0, 0%, 0%, 0.75);
     transition: 0.5s ease;
   }
 
   .menu.active {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 
   .menu__list {
