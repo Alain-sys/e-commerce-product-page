@@ -4,11 +4,11 @@
   gap: 2rem;
 }
 
-.product-images__icon-cross {
+.product-images__cross-button {
   display: none;
 }
 
-.product-slider__icon-previous {
+.product-slider__previous-button {
   display: none;
 }
 
@@ -24,7 +24,7 @@
   border-radius: 15px;
 }
 
-.product-slider__icon-next {
+.product-slider__next-button {
   display: none;
 }
 
@@ -46,6 +46,20 @@
 .product-thumbnail__images {
   width: 88px;
   border-radius: 10px;
+}
+
+.product-modal-images {
+  display: none;
+}
+
+.product-modal-images.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.75);
 }
 
 @media (max-width: 64em) {

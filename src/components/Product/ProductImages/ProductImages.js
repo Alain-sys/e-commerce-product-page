@@ -1,68 +1,93 @@
 import React from 'react';
+import { useState, useRef } from 'react';
 import './ProductImages.css';
 import iconPrevious from '../../../images/icon-previous.svg';
 import iconNext from '../../../images/icon-next.svg';
 import iconCross from '../../../images/icon-close.svg';
-import imageProductOne from '../../../images/image-product-1.jpg';
-import imageProductTwo from '../../../images/image-product-2.jpg';
-import imageProductThree from '../../../images/image-product-3.jpg';
-import imageProductFour from '../../../images/image-product-4.jpg';
-import imageProductOneThumbnail from '../../../images/image-product-1-thumbnail.jpg';
-import imageProductTwoThumbnail from '../../../images/image-product-2-thumbnail.jpg';
-import imageProductThreeThumbnail from '../../../images/image-product-3-thumbnail.jpg';
-import imageProductFourThumbnail from '../../../images/image-product-4-thumbnail.jpg';
 
 const ProductImages = () => {
+  const productCrossButton = useRef(null);
+  const productPreviousButton = useRef(null);
+  const productNextButton = useRef(null);
+  const productModalImages = useRef(null);
+
+  const mainImagesArray = [
+    { id: 0, url: '/assets/image-product-1.jpg' },
+    { id: 1, url: '/assets/image-product-2.jpg' },
+    { id: 2, url: '/assets/image-product-3.jpg' },
+    { id: 3, url: '/assets/image-product-4.jpg' },
+  ];
+
+  const thumbnailImages = [
+    { id: 0, url: '/assets/image-product-1.jpg' },
+    { id: 1, url: '/assets/image-product-2.jpg' },
+    { id: 2, url: '/assets/image-product-3.jpg' },
+    { id: 3, url: '/assets/image-product-4.jpg' },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleClick = (index) => {
+    if (currentIndex !== index) {
+      setCurrentIndex(index);
+    }
+  };
+
+  const hanldePrevClick = () => {
+    if (currentIndex - 1 < 0) {
+      setCurrentIndex(mainImagesArray.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const hanldeNextClick = () => {
+    if (currentIndex + 1 === mainImagesArray.length) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  let mainImage = mainImagesArray[currentIndex];
+
   return (
     <div className="product-images">
-      <button className="product-images__icon-cross" type="button">
+      <button ref={productCrossButton} className="product-images__cross-button" type="button">
         <img src={iconCross} alt="grey cross" />
       </button>
       <div className="product-slider">
-        <button className="product-slider__icon-previous" type="button">
+        <button ref={productPreviousButton} className="product-slider__previous-button" onClick={hanldePrevClick} type="button">
           <img src={iconPrevious} alt="left black arrow" />
         </button>
-        <button className="product-slider__main-button" type="button">
+        <button
+          className="product-slider__main-button"
+          onClick={() => {
+            productModalImages.current.classList.add('active');
+          }}
+          type="button">
           <img
-            className="product-slider__main-image"
-            src={imageProductOne}
+            className="product-slider__main-image "
+            src={process.env.PUBLIC_URL + mainImage.url}
             alt="white and brown leather shoes placing in middle of orange and beige background"
           />
         </button>
-        <button className="product-slider__icon-next" type="button">
+        <button ref={productNextButton} className="product-slider__next-button" onClick={hanldeNextClick} type="button">
           <img src={iconNext} alt="right black arrow" />
         </button>
       </div>
       <div className="product-thumbnail">
-        <button className="product-thumbnail__buttons" type="button">
-          <img
-            className="product-thumbnail__images"
-            src={imageProductOneThumbnail}
-            alt="white and brown leather shoes placing in middle of orange and beige background"
-          />
-        </button>
-        <button className="product-thumbnail__buttons" type="button">
-          <img
-            className="product-thumbnail__images"
-            src={imageProductTwoThumbnail}
-            alt="white and brown leather shoes placing in middle of orange and beige background"
-          />
-        </button>
-        <button className="product-thumbnail__buttons" type="button">
-          <img
-            className="product-thumbnail__images"
-            src={imageProductThreeThumbnail}
-            alt="white and brown leather shoes placing in middle of orange and beige background"
-          />
-        </button>
-        <button className="product-thumbnail__buttons" type="button">
-          <img
-            className="product-thumbnail__images"
-            src={imageProductFourThumbnail}
-            alt="white and brown leather shoes placing in middle of orange and beige background"
-          />
-        </button>
+        {thumbnailImages.map((item, index) => (
+          <button key={index} className="product-thumbnail__buttons" onClick={() => handleClick(index)} type="button">
+            <img
+              className="product-thumbnail__images"
+              src={process.env.PUBLIC_URL + item.url}
+              alt="white and brown leather shoes placing in middle of an orange and beige background"
+            />
+          </button>
+        ))}
       </div>
+      <div ref={productModalImages} className="product-modal-images"></div>
     </div>
   );
 };
