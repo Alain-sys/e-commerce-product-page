@@ -9,6 +9,7 @@ import iconAvatar from '../../images/image-avatar.png';
 
 const Header = () => {
   const menu = useRef(null);
+  const menuList = useRef(null);
 
   return (
     <header>
@@ -18,6 +19,7 @@ const Header = () => {
           type="button"
           onClick={() => {
             menu.current.classList.toggle('active');
+            menuList.current.classList.toggle('active');
           }}>
           <img src={iconHamburger} alt="three grey horizontal bars" />
         </button>
@@ -28,13 +30,15 @@ const Header = () => {
         className="menu"
         onClick={() => {
           menu.current.classList.toggle('active');
+          menuList.current.classList.toggle('active');
         }}>
-        <ul className="menu__list" onClick={(e) => e.stopPropagation()}>
+        <ul ref={menuList} className="menu__list" onClick={(e) => e.stopPropagation()}>
           <button
             className="menu__close"
             type="button"
             onClick={() => {
               menu.current.classList.toggle('active');
+              menuList.current.classList.toggle('active');
             }}>
             <img src={iconCross} alt="grey cross" />
           </button>

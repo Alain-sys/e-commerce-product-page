@@ -1,6 +1,7 @@
 import React from 'react';
-import ProductImages from './ProductImages';
-import ProductBuy from './ProductBuy';
+import './Product.css';
+import ProductImages from './ProductImages/ProductImages';
+import ProductBuy from './ProductBuy/ProductBuy';
 
 const Product = () => {
   return (

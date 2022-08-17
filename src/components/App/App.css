@@ -14,4 +14,16 @@
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  position: relative;
+}
+
+.attribution {
+  text-align: center;
+  letter-spacing: 1px;
+  padding-bottom: 2rem;
+}
+
+.github-profile {
+  font-weight: var(--fw-bold);
+  color: hsla(26, 100%, 55%, 1);
 }

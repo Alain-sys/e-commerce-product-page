@@ -8,6 +8,18 @@ const App = () => {
     <>
       <Header />
       <Product />
+      <footer className="attribution">
+        <p>
+          Challenge by {''}
+          <a className="github-profile" href="https://www.frontendmentor.io/">
+            Frontend Mentor
+          </a>
+          . Coded by {''}
+          <a className="github-profile" href="https://github.com/Alain-sys">
+            Alain-sys
+          </a>
+        </p>
+      </footer>
     </>
   );
 };

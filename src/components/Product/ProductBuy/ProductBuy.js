@@ -1,7 +1,8 @@
 import React from 'react';
-import iconMinus from '../../images/icon-minus.svg';
-import iconPlus from '../../images/icon-plus.svg';
-import iconCartWhite from '../../images/icon-cart-white.svg';
+import './ProductBuy.css';
+import iconMinus from '../../../images/icon-minus.svg';
+import iconPlus from '../../../images/icon-plus.svg';
+import iconCartWhite from '../../../images/icon-cart-white.svg';
 
 const ProductBuy = () => {
   return (

@@ -1,16 +1,16 @@
 import React from 'react';
-import './Product.css';
-import iconPrevious from '../../images/icon-previous.svg';
-import iconNext from '../../images/icon-next.svg';
-import iconCross from '../../images/icon-close.svg';
-import imageProductOne from '../../images/image-product-1.jpg';
-import imageProductTwo from '../../images/image-product-2.jpg';
-import imageProductThree from '../../images/image-product-3.jpg';
-import imageProductFour from '../../images/image-product-4.jpg';
-import imageProductOneThumbnail from '../../images/image-product-1-thumbnail.jpg';
-import imageProductTwoThumbnail from '../../images/image-product-2-thumbnail.jpg';
-import imageProductThreeThumbnail from '../../images/image-product-3-thumbnail.jpg';
-import imageProductFourThumbnail from '../../images/image-product-4-thumbnail.jpg';
+import './ProductImages.css';
+import iconPrevious from '../../../images/icon-previous.svg';
+import iconNext from '../../../images/icon-next.svg';
+import iconCross from '../../../images/icon-close.svg';
+import imageProductOne from '../../../images/image-product-1.jpg';
+import imageProductTwo from '../../../images/image-product-2.jpg';
+import imageProductThree from '../../../images/image-product-3.jpg';
+import imageProductFour from '../../../images/image-product-4.jpg';
+import imageProductOneThumbnail from '../../../images/image-product-1-thumbnail.jpg';
+import imageProductTwoThumbnail from '../../../images/image-product-2-thumbnail.jpg';
+import imageProductThreeThumbnail from '../../../images/image-product-3-thumbnail.jpg';
+import imageProductFourThumbnail from '../../../images/image-product-4-thumbnail.jpg';
 
 const ProductImages = () => {
   return (

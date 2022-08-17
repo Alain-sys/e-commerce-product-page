@@ -108,22 +108,46 @@ header {
 
   .menu {
     position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
-    transform: translateX(-150%);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
     background-color: hsla(0, 0%, 0%, 0.75);
     transition: 0.5s ease;
   }
 
   .menu.active {
-    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s ease;
   }
 
   .menu__list {
     width: 70%;
+    height: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    padding: 3rem 0 0 24px;
     background-color: hsla(0, 0%, 100%, 1);
+    transform: translateX(-150%);
+    transition: 0.5s ease;
+  }
+
+  .menu__list.active {
+    transform: translateX(0%);
+  }
+
+  .menu__close {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu__list__items {
+    font-size: 1.125rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.625rem;
   }
 
   .menu__list__items::after {
