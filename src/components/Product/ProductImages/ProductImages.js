@@ -25,11 +25,10 @@ const ProductImages = () => {
     <>
       <div className="product-images">
         <ProductSlider
-          classNameSlider="product-slider"
-          classNameMainButton="product-slider__main-button"
-          classNameMainImage="product-slider__main-image"
-          classNamePrevButton="product-slider__previous-button"
-          classNameNextButton="product-slider__next-button"
+          classNameMainButton="product-images__main-button"
+          classNameMainImage="product-images__main-image"
+          classNamePrevButton="product-images__previous-button"
+          classNameNextButton="product-images__next-button"
           onClick={() => {
             productModalImages.current.classList.toggle('active');
           }}
@@ -38,7 +37,7 @@ const ProductImages = () => {
         />
       </div>
       <div ref={productModalImages} className="product-modal-images">
-        <div className="product-modal-images__content">
+        <div className="product-modal-slider">
           <button ref={productCloseButton} className="product-modal-slider__close-button" type="button">
             <svg viewBox="0 0 14 15" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -49,7 +48,6 @@ const ProductImages = () => {
             </svg>
           </button>
           <ProductSlider
-            classNameSlider="product-modal-slider"
             classNameMainButton="product-modal-slider__main-button"
             classNameMainImage="product-modal-slider__main-image"
             classNamePrevButton="product-modal-slider__previous-button"

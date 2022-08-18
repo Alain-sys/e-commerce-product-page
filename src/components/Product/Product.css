@@ -66,6 +66,17 @@
   color: hsla(220, 14%, 75%, 1);
 }
 
+@media (max-width: 85em) {
+  .product {
+    width: 80%;
+    gap: 40px;
+  }
+
+  .product-details__title {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 64em) {
   .product {
     width: 90%;

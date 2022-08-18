@@ -1,10 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import iconPrevious from '../../../images/icon-previous.svg';
-import iconNext from '../../../images/icon-next.svg';
 
 const ProductSlider = ({
-  classNameSlider,
   classNameMainButton,
   classNameMainImage,
   classNamePrevButton,
@@ -42,7 +39,7 @@ const ProductSlider = ({
   let mainImage = mainImagesArray[currentIndex];
 
   return (
-    <div className={classNameSlider}>
+    <>
       <button className={classNameMainButton} onClick={onClick} type="button">
         <img
           className={classNameMainImage}
@@ -52,12 +49,12 @@ const ProductSlider = ({
       </button>
       <button className={classNamePrevButton} onClick={hanldePrevClick} type="button">
         <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+          <path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd" />
         </svg>
       </button>
       <button className={classNameNextButton} onClick={hanldeNextClick} type="button">
         <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-          <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+          <path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd" />
         </svg>
       </button>
       <div className="product-thumbnail">
@@ -71,7 +68,7 @@ const ProductSlider = ({
           </button>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
