@@ -1,16 +1,9 @@
 import React from 'react';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import './ProductImages.css';
-import iconPrevious from '../../../images/icon-previous.svg';
-import iconNext from '../../../images/icon-next.svg';
-import iconCross from '../../../images/icon-close.svg';
+import ProductSlider from './ProductSlider';
 
 const ProductImages = () => {
-  const productCrossButton = useRef(null);
-  const productPreviousButton = useRef(null);
-  const productNextButton = useRef(null);
-  const productModalImages = useRef(null);
-
   const mainImagesArray = [
     { id: 0, url: '/assets/image-product-1.jpg' },
     { id: 1, url: '/assets/image-product-2.jpg' },
@@ -18,77 +11,58 @@ const ProductImages = () => {
     { id: 3, url: '/assets/image-product-4.jpg' },
   ];
 
-  const thumbnailImages = [
+  const thumbnailImagesArray = [
     { id: 0, url: '/assets/image-product-1.jpg' },
     { id: 1, url: '/assets/image-product-2.jpg' },
     { id: 2, url: '/assets/image-product-3.jpg' },
     { id: 3, url: '/assets/image-product-4.jpg' },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleClick = (index) => {
-    if (currentIndex !== index) {
-      setCurrentIndex(index);
-    }
-  };
-
-  const hanldePrevClick = () => {
-    if (currentIndex - 1 < 0) {
-      setCurrentIndex(mainImagesArray.length - 1);
-    } else {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const hanldeNextClick = () => {
-    if (currentIndex + 1 === mainImagesArray.length) {
-      setCurrentIndex(0);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  let mainImage = mainImagesArray[currentIndex];
+  const productModalImages = useRef(null);
+  const productCloseButton = useRef(null);
 
   return (
-    <div className="product-images">
-      <button ref={productCrossButton} className="product-images__cross-button" type="button">
-        <img src={iconCross} alt="grey cross" />
-      </button>
-      <div className="product-slider">
-        <button ref={productPreviousButton} className="product-slider__previous-button" onClick={hanldePrevClick} type="button">
-          <img src={iconPrevious} alt="left black arrow" />
-        </button>
-        <button
-          className="product-slider__main-button"
+    <>
+      <div className="product-images">
+        <ProductSlider
+          classNameSlider="product-slider"
+          classNameMainButton="product-slider__main-button"
+          classNameMainImage="product-slider__main-image"
+          classNamePrevButton="product-slider__previous-button"
+          classNameNextButton="product-slider__next-button"
           onClick={() => {
-            productModalImages.current.classList.add('active');
+            productModalImages.current.classList.toggle('active');
           }}
-          type="button">
-          <img
-            className="product-slider__main-image "
-            src={process.env.PUBLIC_URL + mainImage.url}
-            alt="white and brown leather shoes placing in middle of orange and beige background"
-          />
-        </button>
-        <button ref={productNextButton} className="product-slider__next-button" onClick={hanldeNextClick} type="button">
-          <img src={iconNext} alt="right black arrow" />
-        </button>
+          mainImagesArray={mainImagesArray}
+          thumbnailImagesArray={thumbnailImagesArray}
+        />
       </div>
-      <div className="product-thumbnail">
-        {thumbnailImages.map((item, index) => (
-          <button key={index} className="product-thumbnail__buttons" onClick={() => handleClick(index)} type="button">
-            <img
-              className="product-thumbnail__images"
-              src={process.env.PUBLIC_URL + item.url}
-              alt="white and brown leather shoes placing in middle of an orange and beige background"
-            />
+      <div ref={productModalImages} className="product-modal-images">
+        <div className="product-modal-images__content">
+          <button ref={productCloseButton} className="product-modal-slider__close-button" type="button">
+            <svg viewBox="0 0 14 15" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="#FFFFFF"
+                fillRule="evenodd"
+              />
+            </svg>
           </button>
-        ))}
+          <ProductSlider
+            classNameSlider="product-modal-slider"
+            classNameMainButton="product-modal-slider__main-button"
+            classNameMainImage="product-modal-slider__main-image"
+            classNamePrevButton="product-modal-slider__previous-button"
+            classNameNextButton="product-modal-slider__next-button"
+            onClick={() => {
+              return;
+            }}
+            mainImagesArray={mainImagesArray}
+            thumbnailImagesArray={thumbnailImagesArray}
+          />
+        </div>
       </div>
-      <div ref={productModalImages} className="product-modal-images"></div>
-    </div>
+    </>
   );
 };
 
