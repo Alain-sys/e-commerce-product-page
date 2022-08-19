@@ -3,7 +3,7 @@ import './Product.css';
 import ProductImages from './ProductImages/ProductImages';
 import ProductBuy from './ProductBuy/ProductBuy';
 
-const Product = () => {
+const Product = ({ newProduct, setNewProduct }) => {
   return (
     <main className="product">
       <ProductImages />
@@ -21,7 +21,7 @@ const Product = () => {
           </div>
           <p className="product-details__real-price">$250.00</p>
         </div>
-        <ProductBuy />
+        <ProductBuy newProduct={newProduct} setNewProduct={setNewProduct} />
       </div>
     </main>
   );

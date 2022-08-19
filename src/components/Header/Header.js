@@ -8,7 +8,7 @@ import iconCross from '../../images/icon-close.svg';
 import iconLogo from '../../images/logo.svg';
 import iconAvatar from '../../images/image-avatar.png';
 
-const Header = () => {
+const Header = ({ newProduct, setNewProduct }) => {
   const menu = useRef(null);
   const menuList = useRef(null);
   const tabletSize = useMediaQuery('(max-width: 768px)');
@@ -56,7 +56,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className="user">
-        <Cart />
+        <Cart newProduct={newProduct} setNewProduct={setNewProduct} />
         <img className="user__avatar" src={iconAvatar} alt="avatar for represent user connected" />
       </div>
     </header>
