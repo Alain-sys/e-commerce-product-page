@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import './Header.css';
+import useMediaQuery from '../UseMediaQuery';
 import Cart from './Cart';
 import iconHamburger from '../../images/icon-menu.svg';
 import iconCross from '../../images/icon-close.svg';
@@ -10,19 +11,22 @@ import iconAvatar from '../../images/image-avatar.png';
 const Header = () => {
   const menu = useRef(null);
   const menuList = useRef(null);
+  const tabletSize = useMediaQuery('(max-width: 768px)');
 
   return (
     <header>
       <div className="logo-hamburger">
-        <button
-          className="hamburger"
-          type="button"
-          onClick={() => {
-            menu.current.classList.toggle('active');
-            menuList.current.classList.toggle('active');
-          }}>
-          <img src={iconHamburger} alt="three grey horizontal bars" />
-        </button>
+        {tabletSize && (
+          <button
+            className="hamburger"
+            type="button"
+            onClick={() => {
+              menu.current.classList.toggle('active');
+              menuList.current.classList.toggle('active');
+            }}>
+            <img src={iconHamburger} alt="three grey horizontal bars" />
+          </button>
+        )}
         <img src={iconLogo} alt="logo of our company written in lowercase with the black color " />
       </div>
       <nav
@@ -33,15 +37,17 @@ const Header = () => {
           menuList.current.classList.toggle('active');
         }}>
         <ul ref={menuList} className="menu__list" onClick={(e) => e.stopPropagation()}>
-          <button
-            className="menu__close"
-            type="button"
-            onClick={() => {
-              menu.current.classList.toggle('active');
-              menuList.current.classList.toggle('active');
-            }}>
-            <img src={iconCross} alt="grey cross" />
-          </button>
+          {tabletSize && (
+            <button
+              className="menu__close"
+              type="button"
+              onClick={() => {
+                menu.current.classList.toggle('active');
+                menuList.current.classList.toggle('active');
+              }}>
+              <img src={iconCross} alt="grey cross" />
+            </button>
+          )}
           <li className="menu__list__items">Collections</li>
           <li className="menu__list__items">Men</li>
           <li className="menu__list__items">Women</li>

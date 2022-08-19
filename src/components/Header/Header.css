@@ -14,23 +14,10 @@ header {
   gap: 32px;
 }
 
-.hamburger {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .menu__list {
   display: flex;
   list-style: none;
   gap: 32px;
-}
-
-.menu__close {
-  display: none;
-  background: transparent;
-  border: none;
 }
 
 .menu__list__items {
@@ -114,6 +101,7 @@ header {
     height: 100%;
     visibility: hidden;
     opacity: 0;
+    z-index: 1;
     background-color: hsla(0, 0%, 0%, 0.75);
     transition: 0.5s ease;
   }
