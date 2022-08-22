@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
 import './ProductImages.css';
-import './ProductModalImages.css';
 import ProductSlider from './ProductSlider';
 import useMediaQuery from '../../UseMediaQuery';
 

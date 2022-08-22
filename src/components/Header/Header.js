@@ -58,7 +58,6 @@ const Header = ({ newProduct, setNewProduct }) => {
       </nav>
       <div className="user">
         <ModalCart newProduct={newProduct} setNewProduct={setNewProduct} modalCart={modalCart} />
-
         <img className="user__avatar" src={iconAvatar} alt="avatar for represent user connected" />
       </div>
     </header>

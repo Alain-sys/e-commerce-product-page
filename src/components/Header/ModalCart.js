@@ -3,6 +3,7 @@ import './ModalCart.css';
 import imageProduct from '../../images/image-product-1-thumbnail.jpg';
 import iconCart from '../../images/icon-cart.svg';
 import iconDelete from '../../images/icon-delete.svg';
+
 const ModalCart = ({ newProduct, setNewProduct, modalCart }) => {
   return (
     <div className="user__cart">

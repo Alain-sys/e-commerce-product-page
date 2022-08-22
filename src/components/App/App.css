@@ -7,9 +7,11 @@
 }
 
 :root {
+  --fs-title: 2.75rem;
+  --fs-subtitle: 0.8125rem;
   --fw-bold: 700;
-  --clr: hsla(220, 9%, 45%, 1);
-  --clr: hsla(26, 100%, 55%, 1);
+  --clr-grey: hsla(220, 9%, 45%, 1);
+  --clr-orange: hsla(26, 100%, 55%, 1);
 }
 
 body {
@@ -24,9 +26,9 @@ body button {
 }
 
 .attribution {
+  padding-bottom: 2rem;
   text-align: center;
   letter-spacing: 1px;
-  padding-bottom: 2rem;
 }
 
 .github-profile {

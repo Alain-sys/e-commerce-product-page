@@ -12,24 +12,24 @@
 }
 
 .product-details__company {
-  font-size: 0.8125rem;
+  color: var(--clr-orange);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-bold);
   line-height: 1rem;
   letter-spacing: 2px;
-  color: hsla(26, 100%, 55%, 1);
-  font-weight: var(--fw-bold);
 }
 
 .product-details__title {
   margin: 1.7rem 0 2rem 0;
-  font-size: 2.75rem;
-  line-height: 3rem;
-  font-weight: var(--fw-bold);
   color: hsla(220, 14%, 13%, 1);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: 3rem;
 }
 
 .product-details__description {
+  color: var(--clr-grey);
   line-height: 1.625rem;
-  color: hsla(220, 9%, 45%, 1);
 }
 
 .product-details__price {
@@ -46,46 +46,49 @@
 }
 
 .product-details__price-reduction {
-  font-size: 1.75rem;
-  line-height: 2.125rem;
-  font-weight: var(--fw-bold);
   color: hsla(220, 14%, 13%, 1);
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  line-height: 2.125rem;
 }
 
 .product-details__promotion {
   padding: 0.1875rem 10px 0.1875rem 10px;
   border-radius: 6px;
-  font-weight: var(--fw-bold);
   background-color: hsla(26, 100%, 94%, 1);
-  color: hsla(26, 100%, 55%, 1);
+  color: var(--clr-orange);
+  font-weight: var(--fw-bold);
 }
 
 .product-details__real-price {
-  font-weight: var(--fw-bold);
   text-decoration-line: line-through;
-  line-height: 1.625rem;
   color: hsla(220, 14%, 75%, 1);
+  font-weight: var(--fw-bold);
+  line-height: 1.625rem;
 }
 
 @media (max-width: 85em) {
+  :root {
+    --fs-title: 2.5rem;
+  }
+
   .product {
     width: 80%;
     gap: 40px;
   }
-
-  .product-details__title {
-    font-size: 2.5rem;
-  }
 }
 
 @media (max-width: 64em) {
+  :root {
+    --fs-title: 1.875rem;
+  }
+
   .product {
     width: 90%;
   }
 
   .product-details__title {
     margin: 1.1875rem 0 0.9375rem 0;
-    font-size: 1.875rem;
   }
 
   .product-details__price {
@@ -94,6 +97,11 @@
 }
 
 @media (max-width: 48em) {
+  :root {
+    --fs-title: 1.75rem;
+    --fs-subtitle: 0.75rem;
+  }
+
   .product {
     width: 100%;
     flex-direction: column;
@@ -107,13 +115,11 @@
   }
 
   .product-details__company {
-    font-size: 0.75rem;
     letter-spacing: 1.85px;
     line-height: 0.93rem;
   }
 
   .product-details__title {
-    font-size: 1.75rem;
     line-height: 2rem;
   }
 
