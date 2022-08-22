@@ -35,6 +35,7 @@
 .product-details__price {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 1.5rem 0 2rem 0;
 }
 
@@ -117,8 +118,8 @@
   }
 
   .product-details__description {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
   }
 
   .product-details__price {

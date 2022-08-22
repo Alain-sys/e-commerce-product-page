@@ -47,12 +47,6 @@ header {
   gap: 45px;
 }
 
-.user__cart {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .user__avatar {
   height: 50px;
   width: 50px;
@@ -101,7 +95,7 @@ header {
     height: 100%;
     visibility: hidden;
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: hsla(0, 0%, 0%, 0.75);
     transition: 0.5s ease;
   }
