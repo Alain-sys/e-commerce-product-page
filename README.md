@@ -1,6 +1,6 @@
 # Frontend Mentor - E-commerce product page solution
 
-This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW) coded by [Alain-sys](https://github.com/Alain-sys)
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) coded by [Alain-sys](https://github.com/Alain-sys)
 
 ## Table of contents
 
@@ -40,6 +40,7 @@ Users should be able to:
 </details>
 
 <details>
+<summary>Tablet</summary>
   <p align="center">
     <img src="public/assets/e-commerce-product-page-tablet.png" alt="e-commerce-product-page in tablet"/>
   </p>
@@ -78,7 +79,7 @@ I'm going to learn how to use an API in a little project.
 
 - [React](https://beta.reactjs.org/learn)
 - [MDN](https://developer.mozilla.org/fr/)
-- [Stackoverflow](https://stackoverflow.com/
+- [Stackoverflow](https://stackoverflow.com/)
 
 ## Author
 
