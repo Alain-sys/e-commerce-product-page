@@ -55,6 +55,7 @@ header {
 .user__avatar:hover {
   box-shadow: 0 0 0 2px var(--clr-orange);
   border-radius: 50%;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
