@@ -134,6 +134,6 @@
   .modal-cart.active {
     min-width: 95%;
     top: 50%;
-    transform: translate(-50%, -155%);
+    transform: translate(-50%, -150%);
   }
 }
