@@ -43,7 +43,7 @@ const ProductBuy = ({ newProduct, setNewProduct }) => {
             fillRule="nonzero"
           />
         </svg>
-        <p>Add to cart</p>
+        Add to cart
       </button>
     </div>
   );
