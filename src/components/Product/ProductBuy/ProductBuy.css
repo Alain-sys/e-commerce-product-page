@@ -18,9 +18,12 @@
   padding: 1.25rem 16px;
 }
 
+.product-quantity__operator > svg > path {
+  transition: 0.4s ease;
+}
+
 .product-quantity__operator:hover path {
   fill: hsla(26, 100%, 71%, 1);
-  transition: all 0.4s ease;
 }
 
 .product-cart {
@@ -36,6 +39,11 @@
   font-size: 1rem;
   font-weight: var(--fw-bold);
   line-height: 1.25rem;
+  transition: 0.4s ease;
+}
+
+.product-cart:hover {
+  background-color: hsla(26, 100%, 71%, 1);
 }
 
 @media (max-width: 85em) {

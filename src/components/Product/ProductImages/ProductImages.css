@@ -51,6 +51,10 @@
   align-self: flex-end;
 }
 
+.product-modal-content__close-button > svg > path {
+  transition: 0.4s ease;
+}
+
 .product-modal-content__close-button:hover path {
   fill: var(--clr-orange);
 }
@@ -72,6 +76,7 @@
   padding: 20px 24px;
   border-radius: 50%;
   background: hsla(0, 0%, 100%, 1);
+  transition: 0.4s ease;
 }
 
 .product-modal-slider__previous-button {
@@ -80,6 +85,11 @@
 
 .product-modal-slider__next-button {
   left: 100%;
+}
+
+.product-modal-slider__previous-button > svg > path,
+.product-modal-slider__next-button > svg > path {
+  transition: 0.4s ease;
 }
 
 .product-modal-slider__previous-button:hover path,
