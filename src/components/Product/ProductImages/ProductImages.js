@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import './ProductImages.css';
 import ProductSlider from './ProductSlider';
-import useMediaQuery from '../../UseMediaQuery';
+import useMediaQuery from '../../../hooks/UseMediaQuery';
 
 const ProductImages = () => {
   const mainImagesArray = [

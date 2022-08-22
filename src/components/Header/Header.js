@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import './Header.css';
-import useMediaQuery from '../UseMediaQuery';
+import useMediaQuery from '../../hooks/UseMediaQuery';
 import ModalCart from './ModalCart';
 import iconHamburger from '../../images/icon-menu.svg';
 import iconCross from '../../images/icon-close.svg';

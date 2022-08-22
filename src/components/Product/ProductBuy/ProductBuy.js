@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import './ProductBuy.css';
-import iconMinus from '../../../images/icon-minus.svg';
-import iconPlus from '../../../images/icon-plus.svg';
 
 const ProductBuy = ({ newProduct, setNewProduct }) => {
   const [countNewProduct, setCountNewProduct] = useState(0);
@@ -28,11 +26,25 @@ const ProductBuy = ({ newProduct, setNewProduct }) => {
     <div className="product-buy">
       <div className="product-quantity">
         <button className="product-quantity__operator" onClick={handleMinusClick} type="button">
-          <img src={iconMinus} alt="orange horizontal bar for represent the minus sign" />
+          <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+              id="a"
+              fill="#FF7E1B"
+              fill-rule="nonzero"
+            />
+          </svg>
         </button>
         <p>{countNewProduct}</p>
         <button className="product-quantity__operator" onClick={handlePlusClick} type="button">
-          <img src={iconPlus} alt="orange horizontal and vertical bar for represent the plus sign" />
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+              id="b"
+              fill="#FF7E1B"
+              fillRule="nonzero"
+            />
+          </svg>
         </button>
       </div>
       <button className="product-cart" onClick={quantity} type="button">

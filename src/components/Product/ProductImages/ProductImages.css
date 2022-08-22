@@ -52,7 +52,7 @@
 }
 
 .product-modal-content__close-button:hover path {
-  fill: orange;
+  fill: var(--clr-orange);
 }
 
 .product-modal-slider {
@@ -84,7 +84,7 @@
 
 .product-modal-slider__previous-button:hover path,
 .product-modal-slider__next-button:hover path {
-  stroke: orange;
+  stroke: var(--clr-orange);
 }
 
 /********Modal images end*********/

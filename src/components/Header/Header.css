@@ -53,7 +53,7 @@ header {
 }
 
 .user__avatar:hover {
-  border: 2px solid var(--clr-orange);
+  box-shadow: 0 0 0 2px var(--clr-orange);
   border-radius: 50%;
   cursor: pointer;
 }

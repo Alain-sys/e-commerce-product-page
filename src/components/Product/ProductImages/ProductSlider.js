@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import useMediaQuery from '../../UseMediaQuery';
+import useMediaQuery from '../../../hooks/UseMediaQuery';
 
 const ProductSlider = ({
   classNameSlider,

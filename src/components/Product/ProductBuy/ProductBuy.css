@@ -18,6 +18,11 @@
   padding: 1.25rem 16px;
 }
 
+.product-quantity__operator:hover path {
+  fill: hsla(26, 100%, 71%, 1);
+  transition: all 0.4s ease;
+}
+
 .product-cart {
   width: 60%;
   display: flex;
