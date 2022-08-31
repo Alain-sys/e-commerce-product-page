@@ -53,7 +53,7 @@ Users should be able to:
     <img src="public/assets/e-commerce-product-page-mobile-cart.png" alt="e-commerce-product-page in mobile"/>
     <img src="public/assets/e-commerce-product-page-mobile-hamburger.png" alt="e-commerce-product-page in mobile"/>
   </p>
-</details
+</details>
 
 
 ### Links
